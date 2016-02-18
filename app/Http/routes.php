@@ -58,6 +58,10 @@ Route::group(['middleware' => ['web']], function () {
 	});
         
         Route::get('/task/{id}', function($id){
-           return "Hello!"; // placeholder
+            $task = Task::findorfail($id);
+            $data = array(
+                'task' => $task,
+            );
+            return view('taskview', $data);
         });
 });
