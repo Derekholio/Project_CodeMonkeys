@@ -56,4 +56,8 @@ Route::group(['middleware' => ['web']], function () {
 
 	return redirect('/');
 	});
+        
+        Route::get('/task/{id}', function($id){
+           return "Hello!"; // placeholder
+        });
 });
