@@ -53,7 +53,7 @@
 							<tbody>
 								@foreach ($tasks as $task)
 									<tr>
-										<td class="table-text"><div>{{ $task->name }}</div></td>
+                                                                            <td class="table-text"><div><a href="/task/{{$task->id}}">{{ $task->name }}</a></div></td>
 
 										<!-- Task Delete Button -->
 										<td>
