@@ -1,0 +1,27 @@
+.sample-nav-bar{
+    margin: 5px 0px 5px 0px;
+}
+
+.fullscreen{
+    height: 100%; 
+    width: 100%;
+}
+
+.fullscreen-x{
+    width: 100%;
+}
+
+.fullscreen-y{
+    height: 100%;
+}
+
+.discussion{
+    height: 85%; 
+    overflow-y: scroll; 
+    margin-bottom: 5px;
+}
+    
+.discussion-outline{
+    border: 1px black solid;
+    border-radius: 5px;
+}
