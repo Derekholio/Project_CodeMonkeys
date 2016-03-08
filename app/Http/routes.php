@@ -65,3 +65,9 @@ Route::group(['middleware' => ['web']], function () {
             return view('taskview', $data);
         });
 });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+});
