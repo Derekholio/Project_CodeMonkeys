@@ -16,7 +16,7 @@
 }
 
 .discussion{
-    height: 85%; 
+    height: 90%; 
     overflow-y: scroll; 
     margin-bottom: 5px;
 }
@@ -24,4 +24,8 @@
 .discussion-outline{
     border: 1px black solid;
     border-radius: 5px;
+}
+
+html, body {
+    height: 95%;
 }
