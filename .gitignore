@@ -5,3 +5,6 @@ Homestead.yaml
 Homestead.json
 /nbproject
 .env
+.vscode
+composer.phar
+.idea
