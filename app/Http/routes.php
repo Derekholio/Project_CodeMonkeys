@@ -40,6 +40,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	$validator = Validator::make($request->all(),[
 	'name' => 'required|max:255',
+        'priority' => 'required',
 		]);
 		if ($validator->fails()) {
 			return redirect('/')
@@ -48,6 +49,8 @@ Route::group(['middleware' => ['web']], function () {
 		}
 		$task = new Task;
 		$task->name = $request->name;
+                $task->description = $request->description;
+                $task->priority_id = $request->priority;
 		$task->save();
 		return redirect('/');
 	});
