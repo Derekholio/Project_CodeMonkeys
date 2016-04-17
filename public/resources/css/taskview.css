@@ -21,7 +21,7 @@
 }
 
 .discussion{
-    height: 90%; 
+    height: 800px; 
     overflow-y: scroll; 
     margin-bottom: 5px;
 }
@@ -33,4 +33,9 @@
 
 html, body {
     height: 95%;
+}
+
+.discussion {
+    overflow-wrap: break-word;
+    /*overflow-y: hidden;*/
 }

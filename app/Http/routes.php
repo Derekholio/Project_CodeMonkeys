@@ -1,6 +1,7 @@
 <?php
 
 use App\Task;
+use App\Discussions;
 use Illuminate\Http\Request;
 
 /*
@@ -59,11 +60,40 @@ Route::group(['middleware' => ['web']], function () {
         
         Route::get('/task/{id}', function($id){
             $task = Task::findorfail($id);
+            $discussions = Discussions::getDiscussionsForPost($id);
             $data = array(
                 'task' => $task,
+                'discussions' => $discussions,
             );
             return view('taskview', $data);
         });
+        
+        Route::post('/task/{id}/postchat',function (Request $request, $id){
+            
+            if(!Auth::check()){
+                return redirect("/task/$id")->withErrors(['You need to be authenticated to post here.']);
+                
+            }
+
+            $validator = Validator::make($request->all(),[
+                'discussion' => 'required|min:1',
+            ]);
+            
+            if ($validator->fails()) {
+                    return redirect("/task/$id")
+                            ->withInput()
+                            ->withErrors($validator);
+            }
+            
+            $discussion = new Discussions;
+            $discussion->message = $request->discussion;
+            $discussion->posted_time = Carbon\Carbon::now();
+            $discussion->task_id = $id;
+            $discussion->user_id = Auth::id();
+            $discussion->save();
+
+            return redirect("/task/$id");
+	});
 });
 
 Route::group(['middleware' => 'web'], function () {
