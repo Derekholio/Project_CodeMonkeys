@@ -38,9 +38,9 @@
 
 <div class="form-group">
 <label for="task-priority" class="col-sm-3 control-label">Priority</label>
-<label class="radio-inline"><input type="radio" name="priority" value="3" id="task-priority">Low</label>
+<label class="radio-inline"><input type="radio" name="priority" value="1" id="task-priority">Low</label>
 <label class="radio-inline"><input type="radio" name="priority" value="2" id="task-priority">Medium</label>
-<label class="radio-inline"><input type="radio" name="priority" value="1" id="task-priority">High</label>
+<label class="radio-inline"><input type="radio" name="priority" value="3" id="task-priority">High</label>
 
 
 
