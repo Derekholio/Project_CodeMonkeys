@@ -25,7 +25,7 @@
                 <hr class="task-hr"/>
                 Assignee: {{$task->assignee_id}} <br />
                 <hr class="task-hr"/>
-                Priority: {{$task->priority_id}} <br />
+                Priority: {{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}<br />
                 <hr class="task-hr"/>
                 Due date: {{$task->due}} <br />
                 <hr class="task-hr"/>
