@@ -51,6 +51,7 @@ Route::group(['middleware' => ['web']], function () {
 		$task->name = $request->name;
                 $task->description = $request->description;
                 $task->priority_id = $request->priority;
+		$task->due = $request->duedate;
 		$task->save();
 		return redirect('/');
 	});
