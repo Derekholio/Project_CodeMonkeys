@@ -33,9 +33,13 @@
 							</div>
 						<div class="form-group">
 							<label for="task-priority" class="col-sm-3 control-label">Priority</label>
-							<label class="radio-inline"><input type="radio" name="priority" value="1" id="task-priority">Low</label>
-							<label class="radio-inline"><input type="radio" name="priority" value="2" id="task-priority">Medium</label>
-							<label class="radio-inline"><input type="radio" name="priority" value="3" id="task-priority">High</label>
+							<div class="col-sm-6">
+								<select name="priority" class="form-control">
+									@foreach($priorities as $priority)
+										<option value="{{$priority->id}}">{{$priority->priority_text}}</option>
+									@endforeach
+								</select>
+							</div>
 						</div>
 						<div class="form-group">
 							<label for="task-date" class="col-sm-3 control-label">Due Date</label>
