@@ -23,7 +23,7 @@
                 <hr class="task-hr"/>
                 Description: {{$task->description}} <br />
                 <hr class="task-hr"/>
-                Assignee: {{$task->assignee_id}} <br />
+                Assignee: {{$task->user->email or 'Not assigned'}} <br />
                 <hr class="task-hr"/>
                 Priority: {{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}<br />
                 <hr class="task-hr"/>
