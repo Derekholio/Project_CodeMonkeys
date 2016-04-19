@@ -13,4 +13,8 @@ class Task extends Model
     public function user(){
         return $this->hasOne('App\User', 'id', 'assignee_id');
     }
+
+    public function color(){
+        return $this->hasOne('App\Color', 'id', 'color_id');
+    }
 }
