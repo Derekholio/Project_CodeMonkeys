@@ -4,6 +4,7 @@ use App\Task;
 use App\Discussions;
 use App\Priority;
 use App\User;
+use App\Color;
 use Illuminate\Http\Request;
 
 /*
@@ -36,7 +37,8 @@ Route::group(['middleware' => ['web']], function () {
 		return view('tasks', [
             'tasks' => Task::orderBy('created_at','asc')->get(),
             'users' => User::orderBy('id', 'desc')->get(),
-            'priorities' => Priority::orderBy('id', 'asc')->get()
+            'priorities' => Priority::orderBy('id', 'asc')->get(),
+            'colors' => Color::orderBy('id', 'asc')->get()
 	    ]);
 	});
 

@@ -51,11 +51,9 @@
 							<label for="task-color" class="col-sm-3 control-label">Select Color</label>
 							<div class="col-sm-6">
 								<select name="color" class="form-control">
-									<option value="1">Red</option>
-									<option value="2">Blue</option>
-									<option value="3">Green</option>
-									<option value="4">Yellow</option>
-									<option value="5">Orange</option>
+									@foreach($colors as $color)
+										<option value="{{$color->id}}">{{$color->color_text}}</option>
+									@endforeach
 								</select>
 							</div>
 						</div>
