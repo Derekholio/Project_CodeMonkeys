@@ -2,6 +2,7 @@
 
 use App\Task;
 use App\Discussions;
+use App\User;
 use Illuminate\Http\Request;
 
 /*
@@ -32,17 +33,18 @@ Route::group(['middleware' => ['web']], function () {
     //
 	Route::get('/', function () {
 		return view('tasks', [
-		'tasks' => Task::orderBy('created_at','asc')->get()
-	]);
+            'tasks' => Task::orderBy('created_at','asc')->get(),
+            'users' => User::orderBy('id', 'desc')->get(),
+	    ]);
 	});
 
 	Route::post('/task',function (Request $request){
 
 	$validator = Validator::make($request->all(),[
-	    'name' => 'required|max:255',
-        'priority' => 'required',
-        'description' => 'required',
-        'duedate' => 'required'
+            'name' => 'required|max:255',
+            'priority' => 'required',
+            'description' => 'required',
+            'duedate' => 'required'
 		]);
 
 
@@ -51,12 +53,14 @@ Route::group(['middleware' => ['web']], function () {
 				->withInput()
 				->withErrors($validator);
 		}
+
 		$task = new Task;
 		$task->name = $request->name;
         $task->description = $request->description;
         $task->priority_id = $request->priority;
 		$task->due = $request->duedate;
         $task->color_id = $request->color;
+        $task->assignee_id = $request->assignee;
 		$task->save();
 		return redirect('/');
 	});

@@ -56,6 +56,17 @@
 							</div>
 						</div>
 						<div class="form-group">
+							<label for="task-assignee" class="col-sm-3 control-label">Select Assignee</label>
+							<div class="col-sm-6">
+								<select name="assignee" class="form-control">
+									<option value="0">Not Assigned</option>
+									@foreach($users as $user)
+										<option value="{{$user->id}}}">{{$user->email}}</option>
+									@endforeach
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<button type="submit" class="btn btn-default">
 									<i class="fa fa-plus"></i>Add Task
