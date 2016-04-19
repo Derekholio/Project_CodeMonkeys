@@ -31,20 +31,30 @@
 								<input type="text" name="description" id="task-description" class="form-control" value="{{ old('task') }}">
 							</div>
 							</div>
-
-
-
-
-
-<div class="form-group">
-<label for="task-priority" class="col-sm-3 control-label">Priority</label>
-<label class="radio-inline"><input type="radio" name="priority" value="1" id="task-priority">Low</label>
-<label class="radio-inline"><input type="radio" name="priority" value="2" id="task-priority">Medium</label>
-<label class="radio-inline"><input type="radio" name="priority" value="3" id="task-priority">High</label>
-
-
-
-</div>						<!-- Add Task Button -->
+						<div class="form-group">
+							<label for="task-priority" class="col-sm-3 control-label">Priority</label>
+							<label class="radio-inline"><input type="radio" name="priority" value="1" id="task-priority">Low</label>
+							<label class="radio-inline"><input type="radio" name="priority" value="2" id="task-priority">Medium</label>
+							<label class="radio-inline"><input type="radio" name="priority" value="3" id="task-priority">High</label>
+						</div>
+						<div class="form-group">
+							<label for="task-date" class="col-sm-3 control-label">Due Date</label>
+							<div class="col-sm-6">
+								<input type="date" name="duedate" id="task-date" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="task-color" class="col-sm-3 control-label">Select Color</label>
+							<div class="col-sm-6">
+								<select name="color" class="form-control">
+									<option value="1">Red</option>
+									<option value="2" >Blue</option>
+									<option value="3">Green</option>
+									<option value="4">Yellow</option>
+									<option value="5">Orange</option>
+								</select>
+							</div>
+						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<button type="submit" class="btn btn-default">
