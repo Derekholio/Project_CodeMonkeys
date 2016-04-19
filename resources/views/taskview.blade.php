@@ -48,8 +48,10 @@
                 @endforeach
                 <form action="/task/{{$task->id}}/postchat" method="POST">
                     {!! csrf_field() !!}
-                    <textarea name="discussion" class="fullscreen-x"></textarea>
-                    <button class="pull-right" type="submit" value="Submit">Submit</button>
+                    <div class="form-group">
+                        <textarea name="discussion" class="fullscreen-x form-control"></textarea>
+                        <button class="pull-right form-control" style="margin-top: 3px;" type="submit" value="Submit">Submit</button>
+                    </div>
                 </form>
             </div>
 
