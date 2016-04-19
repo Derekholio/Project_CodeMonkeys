@@ -24,7 +24,7 @@
                             <label for="task-description" class="col-sm-3 control-label">Description</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="description" id="task-description" class="form-control" value="{{ old('task') }}">
+                                <input type="text" name="description" maxlength="255" id="task-description" class="form-control" value="{{ old('task') }}">
                             </div>
                         </div>
                         <div class="form-group">

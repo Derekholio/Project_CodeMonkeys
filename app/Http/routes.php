@@ -44,7 +44,7 @@ Route::group(['middleware' => ['web']], function () {
 	$validator = Validator::make($request->all(),[
             'name' => 'required|max:255',
             'priority' => 'required',
-            'description' => 'required',
+            'description' => 'required|max:255',
             'duedate' => 'required'
 		]);
 
