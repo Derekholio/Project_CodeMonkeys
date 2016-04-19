@@ -75,7 +75,7 @@
         </div>
     </nav>
     
-    @include('common.errors');
+    @include('common.errors')
 
     @yield('content')
 
