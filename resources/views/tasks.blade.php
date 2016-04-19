@@ -48,7 +48,7 @@
 							<div class="col-sm-6">
 								<select name="color" class="form-control">
 									<option value="1">Red</option>
-									<option value="2" >Blue</option>
+									<option value="2">Blue</option>
 									<option value="3">Green</option>
 									<option value="4">Yellow</option>
 									<option value="5">Orange</option>
@@ -82,8 +82,11 @@
 							<tbody>
 								@foreach ($tasks as $task)
 									<tr>
-                                                                            <td class="table-text"><div><a href="/task/{{$task->id}}">{{ $task->name }}</a></div></td>
-
+										<td class="table-text">
+											<div>
+												<a href="/task/{{$task->id}}">{{ $task->name }}</a>
+											</div>
+										</td>
 										<!-- Task Delete Button -->
 										<td>
 											<form action="/task/{{ $task->id }}" method="POST">
