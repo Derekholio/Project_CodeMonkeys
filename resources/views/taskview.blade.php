@@ -31,8 +31,6 @@
                 Category: {{$task->category_id}} <br />
                 <hr class="task-hr"/>
                 Color: {{$task->color->color_text}} <br />
-                <hr class="task-hr"/>
-                Discussion: {{$task->discussion_id}} <br />
             </div>
         </div>
     </div>
