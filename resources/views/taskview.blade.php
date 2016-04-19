@@ -43,7 +43,7 @@
             </div>
             <div class="discussion panel-body">
                 @foreach ($discussions as $discussion)
-                <span title='Posted at {{$discussion->posted_time}}'><strong>{{$discussion->user->name}}</strong>: {{$discussion->message}}</span><br />
+                <span title='Posted at {{$discussion->posted_time}}'><strong>{{$discussion->user->first_name}}</strong>: {{$discussion->message}}</span><br />
                     <hr>
                 @endforeach
                 <form action="/task/{{$task->id}}/postchat" method="POST">
