@@ -35,10 +35,7 @@ Route::group(['middleware' => ['web']], function () {
     //
 	Route::get('/', function () {
 		return view('tasks', [
-            'tasks' => Task::orderBy('created_at','asc')->get(),
-            'users' => User::orderBy('id', 'desc')->get(),
-            'priorities' => Priority::orderBy('id', 'asc')->get(),
-            'colors' => Color::orderBy('id', 'asc')->get()
+            'tasks' => Task::orderBy('created_at','asc')->get()
 	    ]);
 	});
 
@@ -117,4 +114,17 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get('/newtask', function() {
+        if(Auth::check()){
+            return view('newtask', [
+                'users' => User::orderBy('id', 'desc')->get(),
+                'priorities' => Priority::orderBy('id', 'asc')->get(),
+                'colors' => Color::orderBy('id', 'asc')->get()
+            ]);
+        }
+        else{
+            return redirect('/')->withErrors('You must be logged in to view that.');
+        }
+    });
 });
