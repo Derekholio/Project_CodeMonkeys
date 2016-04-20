@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class="container">
+	<div class="container-fluid fullscreen">
 		<div class="col-sm-offset-2 col-sm-8">
 						<!-- Current Tasks -->
 						@if (count($tasks) > 0)
