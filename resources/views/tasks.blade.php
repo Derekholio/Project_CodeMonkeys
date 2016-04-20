@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container-fluid fullscreen">
-		<div class="col-sm-offset-2 col-lg-3">
+		<div class="col-lg-3">
 						<!-- Current Tasks -->
 						@if (count($tasks) > 0)
 							<div class="panel panel-default">
@@ -45,7 +45,7 @@
 		</div>
 
 <!-- Doing -->
-		<div class="col-sm-offset-2 col-lg-3">
+		<div class="col-lg-3">
 			<!-- Current Tasks -->
 			@if (count($tasks) > 0)
 				<div class="panel panel-default">
@@ -89,7 +89,7 @@
 
 <!-- Completed -->
 
-		<div class="col-sm-offset-2 col-lg-3">
+		<div class="col-lg-3">
 			<!-- Current Tasks -->
 			@if (count($tasks) > 0)
 				<div class="panel panel-default">
