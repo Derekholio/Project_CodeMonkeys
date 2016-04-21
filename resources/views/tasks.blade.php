@@ -13,8 +13,10 @@
 					<div class="panel-body">
 						<table class="table table-striped task-table">
 							<thead>
-							<th>Task</th>
-							<th>&nbsp;</th>
+								<tr>
+									<th>Task</th>
+									<th>&nbsp;</th>
+								</tr>
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
@@ -56,8 +58,10 @@
 					<div class="panel-body">
 						<table class="table table-striped task-table">
 							<thead>
-							<th>Task</th>
-							<th>&nbsp;</th>
+								<tr>
+									<th>Task</th>
+									<th>&nbsp;</th>
+								</tr>
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
@@ -100,8 +104,10 @@
 					<div class="panel-body">
 						<table class="table table-striped task-table">
 							<thead>
-							<th>Task</th>
-							<th>&nbsp;</th>
+								<tr>
+									<th>Task</th>
+									<th>&nbsp;</th>
+								</tr>
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
