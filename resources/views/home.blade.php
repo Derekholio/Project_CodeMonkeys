@@ -20,7 +20,7 @@
                         <tbody>
                             @foreach($tasks as $task)
                                 <tr>
-                                    <td><a href="/task/{{$task->id}}">{{$task->name}}<a/></td>
+                                    <td><a href="/task/{{$task->id}}">{{$task->name}}</a></td>
                                     <td>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}</td>
                                     <td>{{$task->description}}</td>
                                     <td>{{$task->due}}</td>

@@ -4,7 +4,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="{{asset('resources/css/taskview.css')}}" rel="stylesheet" text="text/css">
+<link href="{{asset('resources/css/taskview.css')}}" rel="stylesheet" type="text/css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <div class="container-fluid fullscreen">
