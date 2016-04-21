@@ -2,13 +2,6 @@
 
 @section('content')
 <div class="container">
-    @if(count($tasks) == 0)
-        <div class="col-lg-12">
-            <div class="alert alert-info col-sm-8 col-sm-offset-2">
-                You don't have any tasks yet. Click <a href="/newtask">"New Task"</a> to get started!
-            </div>
-        </div>
-    @endif
     <div class="row">
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
