@@ -24,7 +24,18 @@
 								<tr>
 									<td class="table-text">
 										<div>
-											<a href="/task/{{$task->id}}">{{ $task->name }}</a>
+											@if($task->color_id == 1)
+												<mark style="background-color: red"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+											@elseif($task ->color_id == 2)
+												<mark style="background-color: blue"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+											@elseif($task ->color_id == 3)
+												<mark style="background-color: green"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+											@elseif($task ->color_id == 4)
+												<mark style="background-color: yellow"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+											@elseif($task ->color_id == 5)
+												<mark style="background-color: orange"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+											@endif
+
 										</div>
 									</td>
 									<!-- Task Delete Button -->
