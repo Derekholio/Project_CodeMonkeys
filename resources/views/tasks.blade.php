@@ -115,7 +115,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
-								@if($task->status == 3)
+								@if($task->status == 2)
 								<tr>
 									<td class="table-text">
 										<div>
