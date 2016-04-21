@@ -73,7 +73,7 @@
 								<tr style="background-color:{{$task->color->color_html_tag}}">
 									<td class="table-text">
 										<div>
-											<a href="/task/{{$task->id}}">{{$task->name}}</a>
+											<a href="/task/{{$task->id}}"><font color="black">{{$task->name}}</font></a>
 										</div>
 									</td>
 									<!-- Task Delete Button -->
@@ -115,7 +115,7 @@
 							<tr style="background-color:{{$task->color->color_html_tag}}">
 								<td class="table-text">
 									<div>
-										<a href="/task/{{$task->id}}">{{$task->name}}</a>
+										<a href="/task/{{$task->id}}"><font color="black">{{$task->name}}</font></a>
 									</div>
 								</td>
 								<!-- Task Delete Button -->
