@@ -22,29 +22,20 @@
 							<tbody>
 							@foreach ($tasks as $task)
 								@if($task->status_id == null || $task->status_id == 0)
-								<tr>
-									<td class="table-text">
-										<div>
-											@if($task->color_id == 1)
-												<mark style="background-color: red; color: white"><a style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 2)
-												<mark style="background-color: blue; color: white"><a style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 3)
-												<mark style="background-color: green; color: white"><a  style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 4)
-												<mark style="background-color: yellow"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 5)
-												<mark style="background-color: orange"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@endif
-										</div>
-									</td>
-									<td class="table-text">
-										<div>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html !!}</div>
-									</td>
-									<td class="table-text">
-										<div>{{$task->due}}</div>
-									</td>
-								</tr>
+									<tr style="background-color:{{$task->color->color_html_tag}}">
+										<td class="table-text">
+											<div>
+												<a href="/task/{{$task->id}}">{{$task->name}}</a>
+											</div>
+										</td>
+										<!-- Task Delete Button -->
+										<td class="table-text">
+											<div>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html !!}</div>
+										</td>
+										<td class="table-text">
+											<div>{{$task->due}}</div>
+										</td>
+									</tr>
 								@endif
 							@endforeach
 							</tbody>
@@ -75,31 +66,20 @@
 							<tbody>
 							@foreach ($tasks as $task)
 								@if($task->status_id == 1)
-								<tr>
-									<td class="table-text">
-										<div>
-											@if($task->color_id == 1)
-												<mark style="background-color: red; color: white"><a style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 2)
-												<mark style="background-color: blue; color: white"><a style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 3)
-												<mark style="background-color: green; color: white"><a  style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 4)
-												<mark style="background-color: yellow"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 5)
-												<mark style="background-color: orange"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@endif
-
-										</div>
-
-									</td>
-									<td class="table-text">
-										<div>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html !!}</div>
-									</td>
-									<td class="table-text">
-										<div>{{$task->due}}</div>
-									</td>
-								</tr>
+									<tr style="background-color:{{$task->color->color_html_tag}}">
+										<td class="table-text">
+											<div>
+												<a href="/task/{{$task->id}}">{{$task->name}}</a>
+											</div>
+										</td>
+										<!-- Task Delete Button -->
+										<td class="table-text">
+											<div>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html !!}</div>
+										</td>
+										<td class="table-text">
+											<div>{{$task->due}}</div>
+										</td>
+									</tr>
 								@endif
 							@endforeach
 							</tbody>
@@ -131,20 +111,10 @@
 							<tbody>
 							@foreach ($tasks as $task)
 								@if($task->status_id == 2)
-								<tr>
+								<tr style="background-color:{{$task->color->color_html_tag}}">
 									<td class="table-text">
 										<div>
-											@if($task->color_id == 1)
-												<mark style="background-color: red; color: white"><a style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 2)
-												<mark style="background-color: blue; color: white"><a style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 3)
-												<mark style="background-color: green; color: white"><a  style="color: white" href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 4)
-												<mark style="background-color: yellow"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@elseif($task ->color_id == 5)
-												<mark style="background-color: orange"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
-											@endif
+											<a href="/task/{{$task->id}}">{{$task->name}}</a>
 										</div>
 									</td>
 									<!-- Task Delete Button -->

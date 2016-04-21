@@ -19,7 +19,7 @@
                         </thead>
                         <tbody>
                             @foreach($tasks as $task)
-                                <tr>
+                                <tr style="background-color:{{$task->color->color_html_tag}}">
                                     <td><a href="/task/{{$task->id}}">{{$task->name}}</a></td>
                                     <td>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}</td>
                                     <td>{{$task->description}}</td>
