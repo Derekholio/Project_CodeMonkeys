@@ -29,7 +29,7 @@
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Due date:</label><span class="col-sm-10">{{$task->due}}</span> <br />
                     <hr class="task-hr"/>
-                    <label class="col-sm-2 control-label">Color:</label> <span class="col-sm-10">{{$task->color->color_text}}</span> <br />
+                    <label class="col-sm-2 control-label">Color:</label> <span class="col-sm-10"><font color={{$task->color->color_text}}>{{$task->color->color_text}}</font></span> <br />
                 </div>
             </div>
         </div>
