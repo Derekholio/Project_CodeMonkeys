@@ -33,7 +33,6 @@ class CreateTasksTable extends Migration
             $table->integer('category_id');
             $table->integer('color_id');
             $table->integer('discussion_id');
-            $table->integer('status');
             $table->timestamps();
         });
     }
