@@ -87,6 +87,44 @@ Route::group(['middleware' => ['web']], function () {
             );
             return view('taskview', $data);
         });
+
+        Route::get('/task/{id}/edit', function($id){
+            $task = Task::findorfail($id);
+            $discussions = Discussions::getDiscussionsForPost($id);
+            $users = User::orderBy('id', 'desc')->get();
+            $priorities = Priority::orderBy('id', 'asc')->get();
+            $colors = Color::orderBy('id', 'asc')->get();
+
+            $data = array(
+                'task' => $task,
+                'discussions' => $discussions,
+                'users' => $users,
+                'priorities' => $priorities,
+                'colors' => $colors
+            );
+
+            return view('taskedit', $data);
+        });
+
+        Route::post('/task/{id}/edit', function(Request $request, $id){
+            var_dump($request->all());
+            $task = Task::findorfail($id);
+            $task->name = $request->name;
+            $task->description = $request->description;
+            $task->assignee_id = $request->assignee;
+            $task->priority_id = $request->priority;
+            $task->due = $request->duedate;
+            $task->color_id = $request->color;
+
+            $task->save();
+
+            return redirect("/task/$id");
+        });
+    
+        Route::delete('/task/{task_id}/deletechat/{discussion_id}', function($task_id, $discussion_id){
+            Discussions::deleteDiscussion($discussion_id);
+            return redirect("/task/$task_id/edit");
+        });
         
         Route::post('/task/{id}/postchat',function (Request $request, $id){
             
