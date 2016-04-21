@@ -57,7 +57,11 @@
                             <span class="col-sm-10">
                                 <select name="status" class="form-control">
                                     @foreach($status as $s)
-                                        <option value="{{$s->id}}">{{$s->status_text}}</option>
+                                        @if($s->status_text == $task->status->status_text)
+                                            <option value="{{$s->id}}" selected>{{$s->status_text}}</option>
+                                        @else
+                                            <option value="{{$s->id}}">{{$s->status_text}}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                             </span>
