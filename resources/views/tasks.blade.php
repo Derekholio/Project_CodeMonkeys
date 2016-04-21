@@ -20,6 +20,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
+								@if($task->status == null || $task->status == 0)
 								<tr>
 									<td class="table-text">
 										<div>
@@ -38,6 +39,7 @@
 										</form>
 									</td>
 								</tr>
+								@endif
 							@endforeach
 							</tbody>
 						</table>
@@ -65,6 +67,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
+								@if($task->status == 1)
 								<tr>
 									<td class="table-text">
 										<div>
@@ -83,6 +86,7 @@
 										</form>
 									</td>
 								</tr>
+								@endif
 							@endforeach
 							</tbody>
 						</table>
@@ -111,6 +115,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
+								@if($task->status == 3)
 								<tr>
 									<td class="table-text">
 										<div>
@@ -129,6 +134,7 @@
 										</form>
 									</td>
 								</tr>
+								@endif
 							@endforeach
 							</tbody>
 						</table>
