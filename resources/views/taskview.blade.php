@@ -21,7 +21,7 @@
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Description:</label><span class="col-sm-10">{{$task->description}}</span> <br />
                     <hr class="task-hr"/>
-                    <label class="col-sm-2 control-label">Assignee:</label><span class="col-sm-10">{{$task->user->email or 'Not assigned'}}</span> <br />
+                    <label class="col-sm-2 control-label">Assignee:</label><span class="col-sm-10">{{$task->user->name or 'Not assigned'}}</span> <br />
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Status:</label><span class="col-sm-10">{{$task->status->status_text or 'nah'}}</span> <br />
                     <hr class="task-hr"/>
@@ -41,7 +41,7 @@
             </div>
             <div class="discussion panel-body">
                 @foreach ($discussions as $discussion)
-                <span title='Posted at {{$discussion->posted_time}}'><strong>{{$discussion->user->email}}</strong>: {{$discussion->message}}</span><br />
+                <span title='Posted at {{$discussion->posted_time}}'><strong>{{$discussion->user->name}}</strong>: {{$discussion->message}}</span><br />
                     <hr>
                 @endforeach
                 <form action="/task/{{$task->id}}/postchat" method="POST">
