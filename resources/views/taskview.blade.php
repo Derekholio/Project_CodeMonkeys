@@ -17,7 +17,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Task:</label><span class="col-sm-10">{{$task->name}}</span> <br />
                     <hr class="task-hr"/>
-                    <label class="col-sm-2 control-label">Created:</label><span class="col-sm-10">{{$task->created_at}}</span> <br />
+                    <label class="col-sm-2 control-label">Created at:</label><span class="col-sm-10">{{$task->created_at}}</span> <br />
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Description:</label><span class="col-sm-10">{{$task->description}}</span> <br />
                     <hr class="task-hr"/>
