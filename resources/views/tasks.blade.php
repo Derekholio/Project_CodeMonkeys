@@ -25,11 +25,11 @@
 									<td class="table-text">
 										<div>
 											@if($task->color_id == 1)
-												<mark style="background-color: red"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+												<mark style="background-color: red; color: white"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
 											@elseif($task ->color_id == 2)
-												<mark style="background-color: blue"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+												<mark style="background-color: blue; color: white"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
 											@elseif($task ->color_id == 3)
-												<mark style="background-color: green"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
+												<mark style="background-color: green; color: white"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
 											@elseif($task ->color_id == 4)
 												<mark style="background-color: yellow"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
 											@elseif($task ->color_id == 5)
