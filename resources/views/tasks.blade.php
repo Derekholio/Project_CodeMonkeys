@@ -89,6 +89,14 @@
 												<mark style="background-color: orange"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
 											@endif
 										</div>
+										<form action="/task/{{ $task->id }}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('Progress') }}
+
+											<button type="submit" class="btn btn-default btn-xs">
+												<i class="glyphicon glyphicon-menu-right"></i>
+											</button>
+										</form>
 									</td>
 									<!-- Task Delete Button -->
 									<td>
@@ -102,14 +110,7 @@
 										</form>
 									</td>
 									<td>
-										<form action="/task/{{ $task->id }}" method="POST">
-											{{ csrf_field() }}
-											{{ method_field('Progress') }}
 
-											<button type="submit" class="btn btn-default">
-												<i class="glyphicon glyphicon-menu-right"></i>
-											</button>
-										</form>
 									</td>
 								</tr>
 								@endif
