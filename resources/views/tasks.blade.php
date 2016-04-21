@@ -107,7 +107,7 @@
 											{{ method_field('Progress') }}
 
 											<button type="submit" class="btn btn-default">
-												<i class="fa glyphicon-menu-right"></i>Delete
+												<i class="glyphicon glyphicon-menu-right"></i>
 											</button>
 										</form>
 									</td>
