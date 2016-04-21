@@ -23,6 +23,15 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        /*
+            Add a slight margin to the right of
+            font awesome icons, so they aren't
+            running into the button text
+        */
+        .fa {
+            margin-right: 2px;
+        }
     </style>
 </head>
 <body id="app-layout">
