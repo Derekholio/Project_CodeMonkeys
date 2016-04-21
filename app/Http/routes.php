@@ -63,7 +63,7 @@ Route::group(['middleware' => ['web']], function () {
 		$task->due = $request->duedate;
         $task->color_id = $request->color;
         $task->assignee_id = $request->assignee;
-        $task->status = 0;//New task
+        $task->status_id = 0;//New task
 		$task->save();
 		return redirect('/');
 	});
