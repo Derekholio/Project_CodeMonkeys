@@ -8,7 +8,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <div class="container-fluid fullscreen">
-    <div class="col-lg-3">
+    <div class="col-lg-5">
         <div class="panel panel-default ">
             <div class="panel-heading">
                 Task Properties
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-5">
         <div class="panel panel-default /*fullscreen-y*/">
             <div class="panel-heading">
                 Discussion Board
@@ -53,18 +53,29 @@
 
         </div>
     </div>
-
-    <!--
-    <div class="col-lg-3">
+    <div class="col-lg-2">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Task History
+                Task Operations
             </div>
             <div class="panel-body">
-                See some task history here
+                <form action="/task/{{$task->id}}/edit" method="GET">
+                    {{ csrf_field() }}
+                    {{ method_field('GET') }}
+                    <button type="submit" class="btn btn-info">
+                        <i class="fa fa-pencil"></i>Edit
+                    </button>
+                </form>
+                <hr class="task-hr" />
+                <form action="/task/{{$task->id}}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fa fa-trash"></i>Delete
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-    -->
 </div>
 @endsection
