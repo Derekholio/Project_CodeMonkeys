@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-	<div align="center" class="container-fluid fullscreen centered" >
-		<div class="col-lg-3">
+	<div class="container-fluid fullscreen centered" >
+		<div class="span-4">
 						<!-- Current Tasks -->
 						@if (count($tasks) > 0)
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									Current Tasks
+									To Do
 								</div>
 
 								<div class="panel-body">
@@ -45,7 +45,7 @@
 		</div>
 
 <!-- Doing -->
-		<div class="col-lg-3">
+		<div class="span4">
 			<!-- Current Tasks -->
 			@if (count($tasks) > 0)
 				<div class="panel panel-default">
@@ -89,7 +89,7 @@
 
 <!-- Completed -->
 
-		<div class="col-lg-3">
+		<div class="span4">
 			<!-- Current Tasks -->
 			@if (count($tasks) > 0)
 				<div class="panel panel-default">
