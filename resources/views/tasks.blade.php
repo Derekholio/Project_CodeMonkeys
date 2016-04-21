@@ -15,7 +15,8 @@
 							<thead>
 								<tr>
 									<th>Task</th>
-									<th>&nbsp;</th>
+									<th>Priority</th>
+									<th>Due Date</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -37,16 +38,11 @@
 											@endif
 										</div>
 									</td>
-									<!-- Task Delete Button -->
 									<td>
-										<form action="/task/{{ $task->id }}" method="POST">
-											{{ csrf_field() }}
-											{{ method_field('DELETE') }}
-
-											<button type="submit" class="btn btn-danger">
-												<i class="fa fa-trash"></i>Delete
-											</button>
-										</form>
+										<div>{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html !!}</div>
+									</td>
+									<td>
+										<div>{{$task->due}}</div>
 									</td>
 								</tr>
 								@endif
