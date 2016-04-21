@@ -35,9 +35,15 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => ['web']], function () {
     //
 	Route::get('/', function () {
-		return view('tasks', [
-            'tasks' => Task::orderBy('created_at','asc')->get()
-	    ]);
+        if(Auth::check()){
+            return view('tasks', [
+                'tasks' => Task::orderBy('created_at','asc')->get()
+            ]);
+        }
+        else{
+            return redirect('/login');
+        }
+
 	});
 
 	Route::post('/task',function (Request $request){
