@@ -19,7 +19,7 @@
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Created at:</label><span class="col-sm-10">{{$task->created_at}}</span> <br />
                     <hr class="task-hr"/>
-                    <label class="col-sm-2 control-label">Description:</label><span class="col-sm-10">{{$task->description}}</span> <br /><hr>
+                    <label class="col-sm-2 control-label">Description:</label><span class="col-sm-10">{{$task->description}}</span> <br />
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Assignee:</label><span class="col-sm-10">{{$task->user->email or 'Not assigned'}}</span> <br />
                     <hr class="task-hr"/>
