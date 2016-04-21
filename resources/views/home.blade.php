@@ -31,19 +31,6 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-        <div class="col-sm-offset-2 col-sm-8">
-            <div class="panel panel-default">
-                <div class="panel-heading"><a href="{{url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}"> Reset Password </a></div>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        
     </div>
 </div>
 @endsection
