@@ -16,6 +16,11 @@ class Discussions extends Model
         
         return $discussions;
     }
+
+    public static function deleteDiscussion($discussion_id){
+        $discussion = Discussions::find($discussion_id);
+        $discussion->delete();
+    }
     
     public function user(){
         return $this->hasOne('App\User', 'id', 'user_id');
