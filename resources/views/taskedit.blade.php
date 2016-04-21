@@ -42,10 +42,10 @@
                                 <select name="assignee" class="form-control">
                                     <option value="0">Not assigned</option>
                                     @foreach($users as $user)
-                                        @if($task->user != null && ($task->user->email == $user->email))
-                                            <option value="{{$user->id}}" selected>{{$user->email}}</option>
+                                        @if($task->user != null && ($task->user->name == $user->name))
+                                            <option value="{{$user->id}}" selected>{{$user->name}}</option>
                                         @else
-                                            <option value="{{$user->id}}">{{$user->email}}</option>
+                                            <option value="{{$user->id}}">{{$user->name}}</option>
                                         @endif
                                     @endforeach
                                 </select>
@@ -115,7 +115,7 @@
                 <div class="discussion panel-body">
                     @foreach ($discussions as $discussion)
                         <span class="col-sm-11" title='Posted at {{$discussion->posted_time}}'>
-                            <strong>{{$discussion->user->email}}</strong>: {{$discussion->message}}</span>
+                            <strong>{{$discussion->user->name}}</strong>: {{$discussion->message}}</span>
                         <span class="col-sm-1">
                             <form action="/task/{{$task->id}}/deletechat/{{$discussion->id}}" method="POST">
                                 {{ csrf_field() }}

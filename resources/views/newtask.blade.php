@@ -59,7 +59,7 @@
                                 <select name="assignee" class="form-control">
                                     <option value="0">Not Assigned</option>
                                     @foreach($users as $user)
-                                        <option value="{{$user->id}}}">{{$user->email}}</option>
+                                        <option value="{{$user->id}}}">{{$user->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
