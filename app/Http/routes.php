@@ -72,9 +72,9 @@ Route::group(['middleware' => ['web']], function () {
         if(!Auth::check()){
             return redirect("/")->withErrors(['You need to be authenticated to delete a task.']);
 
+        }else {
+            Task::findOrFail($id)->delete();
         }
-        Task::findOrFail($id)->delete();
-
 	return redirect('/');
 	});
         
