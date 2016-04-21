@@ -14,21 +14,21 @@
                 Task Properties
             </div>
             <div class="panel-body">
-                Task ID: {{$task->id}} <br />
-                <hr class="task-hr"/>
-                Task: {{$task->name}} <br />
-                <hr class="task-hr"/>
-                Created at: {{$task->created_at}} <br />
-                <hr class="task-hr"/>
-                Description: {{$task->description}} <br />
-                <hr class="task-hr"/>
-                Assignee: {{$task->user->email or 'Not assigned'}} <br />
-                <hr class="task-hr"/>
-                Priority: {{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}<br />
-                <hr class="task-hr"/>
-                Due date: {{$task->due}} <br />
-                <hr class="task-hr"/>
-                Color: {{$task->color->color_text}} <br />
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Task:</label><span class="col-sm-10">{{$task->name}}</span> <br />
+                    <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Created at:</label><span class="col-sm-10">{{$task->created_at}}</span> <br />
+                    <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Description:</label><span class="col-sm-10">{{$task->description}}</span> <br /><hr>
+                    <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Assignee:</label><span class="col-sm-10">{{$task->user->email or 'Not assigned'}}</span> <br />
+                    <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Priority:</label><span class="col-sm-10">{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}</span><br />
+                    <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Due date:</label><span class="col-sm-10">{{$task->due}}</span> <br />
+                    <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Color:</label> <span class="col-sm-10">{{$task->color->color_text}}</span> <br />
+                </div>
             </div>
         </div>
     </div>
