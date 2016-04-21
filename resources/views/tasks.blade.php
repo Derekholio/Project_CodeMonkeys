@@ -101,6 +101,16 @@
 											</button>
 										</form>
 									</td>
+									<td>
+										<form action="/task/{{ $task->id }}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('Progress') }}
+
+											<button type="submit" class="btn btn-default">
+												<i class="fa glyphicon-menu-right"></i>Delete
+											</button>
+										</form>
+									</td>
 								</tr>
 								@endif
 							@endforeach

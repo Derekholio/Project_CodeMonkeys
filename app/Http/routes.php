@@ -67,6 +67,21 @@ Route::group(['middleware' => ['web']], function () {
 		return redirect('/');
 	});
 
+    Route::progres('/task/{id}',function ($id) {
+
+        if (!Auth::check()) {
+            return redirect("/")->withErrors(['You need to be authenticated to progress a task.']);
+
+        } else {
+            $task = Task::findOrFail($id);
+            $tskStat = $task->status();
+            $tskStat++;
+            $task->status = $tskStat;
+            $task->save();
+        }
+        return redirect('/');
+    });
+    
 	Route::delete('/task/{id}',function ($id) {
 
         if(!Auth::check()){
