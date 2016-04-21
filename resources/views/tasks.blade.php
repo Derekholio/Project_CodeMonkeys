@@ -88,7 +88,7 @@
 											@elseif($task ->color_id == 5)
 												<mark style="background-color: orange"><a href="/task/{{$task->id}}">{{ $task->name }}</a></mark>
 											@endif
-												<form action="/task/{{ $task->id }}" method="POST">
+												<form action="/task/{{ $task->id }} " method="POST">
 													{{ csrf_field() }}
 													{{ method_field('Progress') }}
 
