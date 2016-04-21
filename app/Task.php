@@ -17,4 +17,8 @@ class Task extends Model
     public function color(){
         return $this->hasOne('App\Color', 'id', 'color_id');
     }
+
+    public function status(){
+        return $this->hasOne('App\Status', 'id', 'status_id');
+    }
 }
