@@ -28,8 +28,6 @@
                 <hr class="task-hr"/>
                 Due date: {{$task->due}} <br />
                 <hr class="task-hr"/>
-                Category: {{$task->category_id}} <br />
-                <hr class="task-hr"/>
                 Color: {{$task->color->color_text}} <br />
             </div>
         </div>
@@ -55,6 +53,8 @@
 
         </div>
     </div>
+
+    <!--
     <div class="col-lg-3">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -65,5 +65,6 @@
             </div>
         </div>
     </div>
+    -->
 </div>
 @endsection
