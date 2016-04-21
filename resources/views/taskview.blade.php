@@ -64,7 +64,7 @@
                 <form action="/task/{{$task->id}}/edit" method="GET">
                     {{ csrf_field() }}
                     {{ method_field('GET') }}
-                    <button type="submit" class="btn btn-info">
+                    <button style="width: 100px;" type="submit" class="btn btn-info">
                         <i class="fa fa-pencil"></i>Edit
                     </button>
                 </form>
@@ -72,7 +72,7 @@
                 <form action="/task/{{$task->id}}" method="POST">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
-                    <button type="submit" class="btn btn-danger">
+                    <button style="width: 100px;" type="submit" class="btn btn-danger">
                         <i class="fa fa-trash"></i>Delete
                     </button>
                 </form>

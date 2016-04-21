@@ -141,7 +141,7 @@
                     <form action="/task/{{$task->id}}/edit" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('POST') }}
-                        <button type="submit" class="btn btn-info" form="task_form" formmethod="POST">
+                        <button style="width: 100px;" type="submit" class="btn btn-info" form="task_form" formmethod="POST">
                             <i class="fa fa-floppy-o"></i>Save
                         </button>
                     </form>
@@ -149,7 +149,7 @@
                     <form action="/task/{{$task->id}}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
-                        <button type="submit" class="btn btn-danger">
+                        <button style="width: 100px;" type="submit" class="btn btn-danger">
                             <i class="fa fa-trash"></i>Delete
                         </button>
                     </form>
