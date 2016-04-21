@@ -23,6 +23,8 @@
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Assignee:</label><span class="col-sm-10">{{$task->user->email or 'Not assigned'}}</span> <br />
                     <hr class="task-hr"/>
+                    <label class="col-sm-2 control-label">Status:</label><span class="col-sm-10">{{$task->status->status_text or 'nah'}}</span> <br />
+                    <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Priority:</label><span class="col-sm-10">{{$task->priority->priority_text}} {!!$task->priority->priority_icon_html!!}</span><br />
                     <hr class="task-hr"/>
                     <label class="col-sm-2 control-label">Due date:</label><span class="col-sm-10">{{$task->due}}</span> <br />

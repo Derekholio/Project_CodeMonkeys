@@ -21,7 +21,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
-								@if($task->status == null || $task->status == 0)
+								@if($task->status_id == null || $task->status_id == 0)
 								<tr>
 									<td class="table-text">
 										<div>
@@ -74,7 +74,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
-								@if($task->status == 1)
+								@if($task->status_id == 1)
 								<tr>
 									<td class="table-text">
 										<div>
@@ -130,7 +130,7 @@
 							</thead>
 							<tbody>
 							@foreach ($tasks as $task)
-								@if($task->status == 2)
+								@if($task->status_id == 2)
 								<tr>
 									<td class="table-text">
 										<div>

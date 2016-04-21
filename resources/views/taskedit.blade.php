@@ -53,6 +53,17 @@
                         </div>
                         <hr class="task-hr"/>
                         <div class="form-group">
+                            <label class="col-sm-2 control-label">Status:</label>
+                            <span class="col-sm-10">
+                                <select name="status" class="form-control">
+                                    @foreach($status as $s)
+                                        <option value="{{$s->id}}">{{$s->status_text}}</option>
+                                    @endforeach
+                                </select>
+                            </span>
+                        </div>
+                        <hr class="task-hr"/>
+                        <div class="form-group">
                             <label class="col-sm-2 control-label">Priority:</label>
                             <span class="col-sm-10">
                                 <select name="priority" class="form-control">

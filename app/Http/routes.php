@@ -5,6 +5,7 @@ use App\Discussions;
 use App\Priority;
 use App\User;
 use App\Color;
+use App\Status;
 use Illuminate\Http\Request;
 
 /*
@@ -94,20 +95,21 @@ Route::group(['middleware' => ['web']], function () {
             $users = User::orderBy('id', 'desc')->get();
             $priorities = Priority::orderBy('id', 'asc')->get();
             $colors = Color::orderBy('id', 'asc')->get();
+            $status = Status::orderBy('id', 'asc')->get();
 
             $data = array(
                 'task' => $task,
                 'discussions' => $discussions,
                 'users' => $users,
                 'priorities' => $priorities,
-                'colors' => $colors
+                'colors' => $colors,
+                'status' => $status
             );
 
             return view('taskedit', $data);
         });
 
         Route::post('/task/{id}/edit', function(Request $request, $id){
-            var_dump($request->all());
             $task = Task::findorfail($id);
             $task->name = $request->name;
             $task->description = $request->description;
@@ -115,6 +117,7 @@ Route::group(['middleware' => ['web']], function () {
             $task->priority_id = $request->priority;
             $task->due = $request->duedate;
             $task->color_id = $request->color;
+            $task->status_id = $request->status;
 
             $task->save();
 
