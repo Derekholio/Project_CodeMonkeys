@@ -45,6 +45,6 @@ class Color extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('color');
     }
 }
